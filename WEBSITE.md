@@ -14,7 +14,7 @@ In Settings → Pages, choose **GitHub Actions** as the publishing source. The w
 
 - `index.html`: page copy, reported results, citation.
 - `app.js`: selected execution keyframes, tabs, filters, citation copy.
-- `styles.css`: white, monochrome, responsive layout.
+- `styles.css`: Xiaomi orange accents, warm white surfaces, and responsive layout.
 - `assets/`: original observations and diagrams exported from the manuscript.
 
 Five task benchmarks: LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, R2R-CE. R2R-CE values refer to the `rand100` Val-Unseen subset. The page does not use synthetic LIBERO-Plus baseline values for comparisons. Playback is explicitly labeled as keyframe playback.
