@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="assets/OmniBrain-0-Technical-Report.pdf"><img src="assets/badge-paper.svg" height="28" alt="Paper: Technical Report"></a>
+  <a href="https://luo-yc17.github.io/OmniBrain-0/assets/OmniBrain-0-Technical-Report.pdf"><img src="assets/badge-paper.svg" height="28" alt="Paper: Technical Report"></a>
   &nbsp;
   <a href="https://luo-yc17.github.io/OmniBrain-0/"><img src="assets/badge-project.svg" height="28" alt="Project Page"></a>
   &nbsp;
