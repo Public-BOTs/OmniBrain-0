@@ -1,4 +1,7 @@
 'use strict';
+// Retain the task player for restoration, and skip its initialization while hidden.
+if (document.getElementById('execution-panel')) {
+'use strict';
 // Keep the earlier HTML interactive during a staged GitHub Pages deployment.
 if (document.getElementById('evidence')) {
 'use strict';
@@ -133,4 +136,22 @@ if ('IntersectionObserver' in window) {
 }
 renderStep();
 
+}
+
+} else {
+const citationButton = document.getElementById('copy-citation');
+if (citationButton) citationButton.addEventListener('click', async () => {
+  const text = document.getElementById('bibtex').textContent;
+  try { await navigator.clipboard.writeText(text); document.getElementById('copy-status').textContent = 'Citation copied.'; }
+  catch { const range = document.createRange(); range.selectNodeContents(document.getElementById('bibtex')); const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range); document.getElementById('copy-status').textContent = 'Citation selected. Use your browser’s copy command.'; }
+});
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      document.querySelectorAll('.site-header nav a').forEach(link => { if (link.getAttribute('href') === `#${entry.target.id}`) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+    });
+  }, {rootMargin: '-15% 0px -60% 0px'});
+  document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+}
 }
