@@ -22,3 +22,9 @@ Five task benchmarks: LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, R2R-CE
 The institutional citation follows the current manuscript; replace it with the final author list and publication link when available. This repository contains the project website, not training code or model weights.
 
 Design reference: https://public-bots.github.io/UCAG-P/. Implementation and research copy are specific to OmniBrain-0.
+
+## Figure source
+
+All figures and execution keyframes were re-exported from the latest Overleaf compilation on 2026-10-20. `assets/figure-sources.json` records their PDF pages and crop bounds. The export script renders onto white (`alpha=False`) to preserve the PDF appearance and avoid black transparent regions.
+
+`assets/OmniBrain-0-Technical-Report.pdf` is a web-optimized copy of that 46-page report; page order and searchable text are preserved.
