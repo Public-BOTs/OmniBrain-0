@@ -1,5 +1,8 @@
-<h1 align="center">OmniBrain-0</h1>
-<h3 align="center">A Unified Agentic Model for Embodied Intelligence</h3>
+<p align="center">
+  <img src="assets/omnibrain-wordmark.svg" width="380" alt="OmniBrain-0">
+</p>
+
+<h1 align="center">OmniBrain-0: A Unified Agentic Model for Embodied Intelligence</h1>
 
 <p align="center">
   Xiaomi Embodied Intelligence Team &nbsp;×&nbsp; Tsinghua University &nbsp;×&nbsp; University of Macau
@@ -13,11 +16,12 @@
   <a href="#release-status"><img src="assets/badge-code.svg" height="28" alt="Code: Release Soon"></a>
 </p>
 
+## 🌟 Core Highlights
+
 <p align="center">
   <img src="assets/repository-overview.webp?v=overleaf-20261020" width="100%" alt="Overview of OmniBrain-0: three-stage training, unified agentic execution, performance, and rubric-guided recursive self-improvement">
 </p>
 
-## Overview
 
 **OmniBrain-0 is a compact agentic brain that unifies manipulation and navigation in one learned high-level decision model.** It understands instructions, plans over multiple steps, coordinates specialist tools, tracks execution progress, and recovers from failures using environmental feedback.
 
