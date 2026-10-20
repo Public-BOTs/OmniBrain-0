@@ -13,7 +13,8 @@ In Settings → Pages, choose **GitHub Actions** as the publishing source. The w
 ## Editing
 
 - `index.html`: page copy, reported results, citation.
-- `app.js`: selected execution keyframes, tabs, citation copy.
+- `app.js`: execution playback, benchmark tabs, citation copy.
+- `assets/execution-demos.js`: concise execution summaries and embedded WebP observations.
 - `styles.css`: Xiaomi orange accents, warm white surfaces, and responsive layout.
 - `assets/`: original observations and diagrams exported from the manuscript.
 
@@ -34,3 +35,7 @@ All figures and execution keyframes were re-exported from the latest Overleaf co
 The concept illustration is used only as a pale CSS background behind the title. The standalone artwork card, small section kickers, repeated figure-source notes, result filters, and expandable detail controls have been removed. Primary descriptions use 20–22 px desktop type and 18–19 px mobile type. The title has Technical report, Code, and Demos resources.
 
 The results comparison is responsive HTML with a shared 0–100 scale, rather than a raster figure with small angled labels. LIBERO-Plus adds ABot-M0 (80.5), π0.5 (83.4), OmniBrain-0 9B (83.8), and RSI (84.5), from Table 2. Synthetic zero-shot entries in that table are excluded. The other four comparisons retain the scores from the supplied Figure 1. The 4B/9B/RSI table is unchanged.
+
+## Task execution refresh
+
+The manipulation examples use original observations from slides 1–3 of `详细可视化（新）.pptx`: salad-dressing placement (5 steps), two bread loaves (5 steps), and croissant with jam (6 steps). Each step shows its observation, one short Think summary, and the corresponding Tool. The R2R-CE example keeps its 8 paper keyframes. Previous/next controls stop at the ends, and step playback can be paused or replayed. No video or additional measured results are synthesized. The reminder-policy page from the deck is excluded.
