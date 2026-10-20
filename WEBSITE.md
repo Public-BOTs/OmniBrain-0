@@ -28,3 +28,7 @@ Design reference: https://public-bots.github.io/UCAG-P/. Implementation and rese
 All figures and execution keyframes were re-exported from the latest Overleaf compilation on 2026-10-20. `assets/figure-sources.json` records their PDF pages and crop bounds. The export script renders onto white (`alpha=False`) to preserve the PDF appearance and avoid black transparent regions.
 
 `assets/OmniBrain-0-Technical-Report.pdf` is a web-optimized copy of that 46-page report; page order and searchable text are preserved.
+
+## Visual refresh
+
+The project page uses one generated concept illustration (`assets/hero-unified-brain.webp`) to introduce the shared brain across manipulation and navigation. It is presented as a concept illustration, with the actual paper figures and execution examples retained below. The previous four-image hero strip and its source-note caption were removed.
