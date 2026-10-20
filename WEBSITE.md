@@ -13,11 +13,11 @@ In Settings → Pages, choose **GitHub Actions** as the publishing source. The w
 ## Editing
 
 - `index.html`: page copy, reported results, citation.
-- `app.js`: selected execution keyframes, tabs, filters, citation copy.
+- `app.js`: selected execution keyframes, tabs, citation copy.
 - `styles.css`: Xiaomi orange accents, warm white surfaces, and responsive layout.
 - `assets/`: original observations and diagrams exported from the manuscript.
 
-Five task benchmarks: LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, R2R-CE. R2R-CE values refer to the `rand100` Val-Unseen subset. The page does not use synthetic LIBERO-Plus baseline values for comparisons. Playback is explicitly labeled as keyframe playback.
+Five task benchmarks: LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, R2R-CE. R2R-CE values refer to the `rand100` Val-Unseen subset. The page does not use synthetic LIBERO-Plus baseline values for comparisons. Playback is explicitly labeled as execution-step playback.
 
 The institutional citation follows the current manuscript; replace it with the final author list and publication link when available. This repository contains the project website, not training code or model weights.
 
@@ -29,6 +29,8 @@ All figures and execution keyframes were re-exported from the latest Overleaf co
 
 `assets/OmniBrain-0-Technical-Report.pdf` is a web-optimized copy of that 46-page report; page order and searchable text are preserved.
 
-## Visual refresh
+## Clear research-page layout
 
-The project page uses one generated concept illustration (`assets/hero-unified-brain.webp`) to introduce the shared brain across manipulation and navigation. It is presented as a concept illustration, with the actual paper figures and execution examples retained below. The previous four-image hero strip and its source-note caption were removed.
+The concept illustration is used only as a pale CSS background behind the title. The standalone artwork card, small section kickers, repeated figure-source notes, result filters, and expandable detail controls have been removed. Primary descriptions use 20–22 px desktop type and 18–19 px mobile type. The title has Technical report, Code, and Demos resources.
+
+The results comparison is responsive HTML with a shared 0–100 scale, rather than a raster figure with small angled labels. LIBERO-Plus adds ABot-M0 (80.5), π0.5 (83.4), OmniBrain-0 9B (83.8), and RSI (84.5), from Table 2. Synthetic zero-shot entries in that table are excluded. The other four comparisons retain the scores from the supplied Figure 1. The 4B/9B/RSI table is unchanged.
