@@ -1,4 +1,7 @@
 'use strict';
+// Keep the earlier HTML interactive during a staged GitHub Pages deployment.
+if (document.getElementById('evidence')) {
+'use strict';
 const demos={
 libero:{kind:'MANIPULATION · FAILURE RECOVERY',task:'Turn on the stove and place the moka pot.',steps:[
 ['Ground the task','Localize the moka pot and the stove, then approach the pot.','The pot and stove are visible; the pot has not been grasped.','observe_state() → localize_pixels() → move_arm()'],
@@ -51,3 +54,83 @@ $('copy-citation').addEventListener('click',async()=>{const text=$('bibtex').tex
 document.addEventListener('visibilitychange',()=>{if(document.hidden)stopPlayback();});
 if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.site-header nav a').forEach(a=>{if(a.getAttribute('href')===`#${e.target.id}`)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}});},{rootMargin:'-15% 0px -60% 0px'});document.querySelectorAll('section[id]').forEach(s=>observer.observe(s));}
 renderStep();
+
+} else {
+'use strict';
+const demos = executionDemos;
+const $ = id => document.getElementById(id);
+let activeDemo = 'libero';
+let step = 0;
+let playTimer = null;
+function updatePlayButton() {
+  const label = playTimer ? 'Pause' : step === demos[activeDemo].steps.length - 1 ? 'Replay steps' : 'Play steps';
+  $('play-steps').textContent = (playTimer ? 'Ⅱ ' : '▶ ') + label;
+  $('play-steps').setAttribute('aria-label', playTimer ? 'Pause execution steps' : 'Play execution steps');
+}
+function renderStep() {
+  const demo = demos[activeDemo];
+  const current = demo.steps[step];
+  $('demo-task').textContent = demo.task;
+  $('execution-image').src = current.image;
+  $('execution-image').alt = `${demo.task} ${current.name}. ${current.think}`;
+  $('step-label').textContent = current.name;
+  $('decision').textContent = current.think;
+  $('tool-call').textContent = current.tool;
+  $('image-step').textContent = `${step + 1} / ${demo.steps.length}`;
+  $('previous-step').disabled = step === 0;
+  $('next-step').disabled = step === demo.steps.length - 1;
+  updatePlayButton();
+}
+function stopPlayback() {
+  if (playTimer) clearInterval(playTimer);
+  playTimer = null;
+  updatePlayButton();
+}
+$('play-steps').addEventListener('click', () => {
+  if (playTimer) { stopPlayback(); return; }
+  if (step === demos[activeDemo].steps.length - 1) { step = 0; renderStep(); }
+  playTimer = setInterval(() => {
+    step++;
+    renderStep();
+    if (step === demos[activeDemo].steps.length - 1) stopPlayback();
+  }, 3200);
+  updatePlayButton();
+});
+$('previous-step').addEventListener('click', () => { stopPlayback(); step = Math.max(0, step - 1); renderStep(); });
+$('next-step').addEventListener('click', () => { stopPlayback(); step = Math.min(demos[activeDemo].steps.length - 1, step + 1); renderStep(); });
+const tabs = [...document.querySelectorAll('[data-demo]')];
+function selectDemo(tab) {
+  stopPlayback();
+  activeDemo = tab.dataset.demo;
+  step = 0;
+  tabs.forEach(button => { const selected = button === tab; button.setAttribute('aria-selected', String(selected)); button.tabIndex = selected ? 0 : -1; });
+  $('execution-panel').setAttribute('aria-labelledby', tab.id);
+  renderStep();
+}
+tabs.forEach((tab, i) => {
+  tab.addEventListener('click', () => selectDemo(tab));
+  tab.addEventListener('keydown', event => {
+    if (!['ArrowRight', 'ArrowLeft', 'Home', 'End'].includes(event.key)) return;
+    event.preventDefault();
+    const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (i + (event.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length;
+    selectDemo(tabs[next]); tabs[next].focus();
+  });
+});
+$('copy-citation').addEventListener('click', async () => {
+  const text = $('bibtex').textContent;
+  try { await navigator.clipboard.writeText(text); $('copy-status').textContent = 'Citation copied.'; }
+  catch { const range = document.createRange(); range.selectNodeContents($('bibtex')); const selection = window.getSelection(); selection.removeAllRanges(); selection.addRange(range); $('copy-status').textContent = 'Citation selected. Use your browser’s copy command.'; }
+});
+document.addEventListener('visibilitychange', () => { if (document.hidden) stopPlayback(); });
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      document.querySelectorAll('.site-header nav a').forEach(link => { if (link.getAttribute('href') === `#${entry.target.id}`) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
+    });
+  }, {rootMargin: '-15% 0px -60% 0px'});
+  document.querySelectorAll('section[id]').forEach(section => observer.observe(section));
+}
+renderStep();
+
+}
