@@ -14,12 +14,11 @@
   <title>OmniBrain-0 · A Unified Agentic Brain</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20261020-execution5">
-  <script src="assets/execution-demos.js?v=20261020-execution5" defer></script>
-  <script src="app.js?v=20261020-execution5" defer></script>
+  <script src="app.js?v=20261021-hide-execution" defer></script>
 </head>
 <body>
 <a class="skip" href="#overview">Skip to content</a>
-<header class="site-header"><a class="brand" href="#top" aria-label="OmniBrain-0 home"><img src="assets/omnibrain-wordmark.svg" width="960" height="220" alt="OmniBrain-0"></a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#execution">Demos</a><a href="#results">Results</a><a href="#method">Method</a><a href="#rsi">RSI</a></nav></header>
+<header class="site-header"><a class="brand" href="#top" aria-label="OmniBrain-0 home"><img src="assets/omnibrain-wordmark.svg" width="960" height="220" alt="OmniBrain-0"></a><nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#results">Results</a><a href="#method">Method</a><a href="#rsi">RSI</a></nav></header>
 <main>
 <section class="hero" id="top" aria-labelledby="hero-title">
  <div class="hero-background" aria-hidden="true"></div>
@@ -27,7 +26,7 @@
   <h1 id="hero-title">OmniBrain<span>-0</span></h1>
   <p class="hero-statement">A Unified Agentic Model<br>for Embodied Intelligence</p>
   <p class="authors"><span class="author-xiaomi">Xiaomi Embodied Intelligence Team</span><span class="author-divider" aria-hidden="true">×</span><span>Tsinghua University</span><span class="author-divider" aria-hidden="true">×</span><span>University of Macau</span></p>
-  <div class="hero-actions"><a class="button primary" href="assets/OmniBrain-0-Technical-Report.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6v18h12V7Zm0 0v5h5M9 12h6m-6 4h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Technical report</a><a class="button" href="https://github.com/luo-yc17/OmniBrain-0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.4-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.55 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.8 10.8 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.31-2.63 5.26-5.14 5.54.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>Code</a><a class="button" href="#execution">Demos <span aria-hidden="true">↓</span></a></div>
+  <div class="hero-actions"><a class="button primary" href="assets/OmniBrain-0-Technical-Report.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6v18h12V7Zm0 0v5h5M9 12h6m-6 4h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>Technical report</a><a class="button" href="https://github.com/luo-yc17/OmniBrain-0" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.1c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.63 1.22 3.27.93.1-.73.4-1.22.71-1.5-2.5-.29-5.13-1.25-5.13-5.55 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .95-.3 3.08 1.15a10.8 10.8 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.55.23 2.7.11 2.98.72.79 1.16 1.79 1.16 3.02 0 4.31-2.63 5.26-5.14 5.54.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>Code</a></div>
  </div>
 </section>
 <div class="facts wrap" aria-label="The work at a glance"><div><strong>1</strong><span>unified brain</span></div><div><strong>4B / 9B</strong><span>model sizes</span></div><div><strong>5</strong><span>task benchmarks</span></div><div><strong>RSI</strong><span>recursive self-improvement</span></div></div>
@@ -37,20 +36,6 @@
  <figure class="paper-figure"><img src="assets/repository-overview.webp?v=overleaf-20261020" alt="OmniBrain-0 overview: training, agentic execution, performance, and recursive self-improvement" loading="lazy" width="3001" height="2138"></figure>
  <p class="body-copy">Available in 4B and 9B sizes, the shared brain builds on specialist controllers while learning when and how to use their skills. The RSI data flywheel turns verified successes and recovery trajectories into training experience for the next round.</p>
 </section>
-<section class="section section-soft" id="execution" aria-labelledby="execution-title"><div class="wrap">
- <h2 id="execution-title">Task execution</h2>
- <p class="lead">Reasoning and tool use, one step at a time.</p>
- <div class="tabs" role="tablist" aria-label="Choose an execution"><button role="tab" aria-selected="true" aria-controls="execution-panel" id="tab-libero" data-demo="libero">LIBERO-Pro</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robotwin" data-demo="robotwin" tabindex="-1">RoboTwin 2.0</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robocasa" data-demo="robocasa" tabindex="-1">RoboCasa365</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-navigation" data-demo="navigation" tabindex="-1">R2R-CE</button></div>
- <div class="execution-panel" id="execution-panel" role="tabpanel" aria-labelledby="tab-libero">
-  <div class="task-instruction"><span>Task</span><h3 id="demo-task">Pick the salad dressing and place it in the basket.</h3></div>
-  <div class="execution-layout">
-   <div class="execution-visual"><img id="execution-image" alt="Salad dressing and basket before the first action" width="768" height="768"></div>
-   <div class="execution-reasoning" aria-live="polite" aria-atomic="true"><h4 id="step-label">Localize</h4><div class="think-block"><h5>Think</h5><p id="decision">Nothing is held. Locate the bottle and basket, then approach the bottle.</p></div><div class="tool-block"><h5>Tool</h5><code id="tool-call">localize_pixels(…)
-move_arm(…)</code></div></div>
-  </div>
-  <div class="execution-controls"><button class="step-arrow" id="previous-step" aria-label="Previous execution step">←</button><span class="step-count" id="image-step" aria-label="Current execution step">1 / 5</span><button class="play-button" id="play-steps" aria-label="Play execution steps"><span aria-hidden="true">▶</span> Play steps</button><button class="step-arrow" id="next-step" aria-label="Next execution step">→</button></div>
- </div>
-</div></section>
 <section class="section wrap" id="results" aria-labelledby="results-title">
  <h2 id="results-title">Results across five benchmarks</h2>
  <p class="lead">One shared brain is evaluated on LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, and R2R-CE.</p>
