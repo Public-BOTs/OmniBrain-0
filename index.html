@@ -13,8 +13,9 @@
   <link rel="canonical" href="https://luo-yc17.github.io/OmniBrain-0/">
   <title>OmniBrain-0 · A Unified Agentic Brain</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20261020-clear4">
-  <script src="app.js?v=20261020-clear4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261020-execution5">
+  <script src="assets/execution-demos.js?v=20261020-execution5" defer></script>
+  <script src="app.js?v=20261020-execution5" defer></script>
 </head>
 <body>
 <a class="skip" href="#overview">Skip to content</a>
@@ -38,13 +39,18 @@
 </section>
 <section class="section section-soft" id="execution" aria-labelledby="execution-title"><div class="wrap">
  <h2 id="execution-title">Task execution</h2>
- <p class="lead">Follow the agent’s decisions across manipulation, household tasks, and indoor navigation.</p>
-  <div class="tabs" role="tablist" aria-label="Choose an execution"><button role="tab" aria-selected="true" aria-controls="execution-panel" id="tab-libero" data-demo="libero">LIBERO-Pro</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robotwin" data-demo="robotwin" tabindex="-1">RoboTwin 2.0</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robocasa" data-demo="robocasa" tabindex="-1">RoboCasa365</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-navigation" data-demo="navigation" tabindex="-1">R2R-CE</button></div>
-  <div class="execution-panel" id="execution-panel" role="tabpanel" aria-labelledby="tab-libero">
-    <div class="observation"><img id="execution-image" src="assets/libero-1.webp?v=overleaf-20261020" alt="Initial observation: moka pot and stove" width="361" height="361"><span class="image-label">OBSERVATION <span id="image-step">01 / 08</span></span></div>
-    <div class="execution-copy"><p class="eyebrow" id="demo-kind">MANIPULATION · FAILURE RECOVERY</p><h3 id="demo-task">Turn on the stove and place the moka pot.</h3><div class="step-content" aria-live="polite" aria-atomic="true"><p class="step-index" id="step-label">STEP 01 — GROUND THE TASK</p><p class="decision" id="decision">Localize the moka pot and the stove, then approach the pot.</p><dl><dt>Evidence</dt><dd id="evidence">The pot and stove are visible; the pot has not been grasped.</dd><dt>Tool invocation</dt><dd><code id="tool-call">observe_state() → localize_pixels() → move_arm()</code></dd></dl></div><div class="step-controls"><button class="icon-button" id="previous-step" aria-label="Previous execution step">←</button><button class="play-button" id="play-steps" aria-label="Play execution steps">Play steps <span aria-hidden="true">▶</span></button><button class="icon-button" id="next-step" aria-label="Next execution step">→</button></div><div class="step-dots" aria-label="Execution steps" id="step-dots"></div><a class="text-link" id="full-trace" href="assets/trace-libero.webp?v=overleaf-20261020" target="_blank" rel="noopener">View the complete trace <span aria-hidden="true">↗</span></a></div>
-  </div></div>
-</section>
+ <p class="lead">Reasoning and tool use, one step at a time.</p>
+ <div class="tabs" role="tablist" aria-label="Choose an execution"><button role="tab" aria-selected="true" aria-controls="execution-panel" id="tab-libero" data-demo="libero">LIBERO-Pro</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robotwin" data-demo="robotwin" tabindex="-1">RoboTwin 2.0</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robocasa" data-demo="robocasa" tabindex="-1">RoboCasa365</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-navigation" data-demo="navigation" tabindex="-1">R2R-CE</button></div>
+ <div class="execution-panel" id="execution-panel" role="tabpanel" aria-labelledby="tab-libero">
+  <div class="task-instruction"><span>Task</span><h3 id="demo-task">Pick the salad dressing and place it in the basket.</h3></div>
+  <div class="execution-layout">
+   <div class="execution-visual"><img id="execution-image" alt="Salad dressing and basket before the first action" width="768" height="768"></div>
+   <div class="execution-reasoning" aria-live="polite" aria-atomic="true"><h4 id="step-label">Localize</h4><div class="think-block"><h5>Think</h5><p id="decision">Nothing is held. Locate the bottle and basket, then approach the bottle.</p></div><div class="tool-block"><h5>Tool</h5><code id="tool-call">localize_pixels(…)
+move_arm(…)</code></div></div>
+  </div>
+  <div class="execution-controls"><button class="step-arrow" id="previous-step" aria-label="Previous execution step">←</button><span class="step-count" id="image-step" aria-label="Current execution step">1 / 5</span><button class="play-button" id="play-steps" aria-label="Play execution steps"><span aria-hidden="true">▶</span> Play steps</button><button class="step-arrow" id="next-step" aria-label="Next execution step">→</button></div>
+ </div>
+</div></section>
 <section class="section wrap" id="results" aria-labelledby="results-title">
  <h2 id="results-title">Results across five benchmarks</h2>
  <p class="lead">One shared brain is evaluated on LIBERO-Pro, LIBERO-Plus, RoboCasa365, RoboTwin 2.0, and R2R-CE.</p>
