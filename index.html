@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="OmniBrain-0: a unified agentic model for embodied intelligence. Compact 4B and 9B agents for manipulation, navigation, and recursive self-improvement.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="OmniBrain-0 — A Unified Agentic Brain">
+  <meta property="og:description" content="Manipulation and navigation. 4B and 9B models. Five task benchmarks. A shared decision model that plans, coordinates skills, and recovers from feedback.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://luo-yc17.github.io/OmniBrain-0/">
+  <meta property="og:image" content="https://luo-yc17.github.io/OmniBrain-0/assets/repository-overview.webp">
+  <link rel="canonical" href="https://luo-yc17.github.io/OmniBrain-0/">
+  <title>OmniBrain-0 · A Unified Agentic Brain</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#overview">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="OmniBrain-0 home"><span class="brand-mark" aria-hidden="true">O<span></span></span>OmniBrain<span class="muted">-0</span></a>
+  <nav aria-label="Main navigation"><a href="#overview">Overview</a><a href="#execution">In action</a><a href="#results">Results</a><a href="#method">Method</a><a href="#rsi">RSI</a></nav>
+  <a class="header-link" href="https://github.com/luo-yc17/OmniBrain-0" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+<section class="hero wrap" id="top" aria-labelledby="hero-title">
+  <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>AGENTIC EMBODIED INTELLIGENCE</p>
+  <h1 id="hero-title">OmniBrain<span>-0</span></h1>
+  <p class="hero-statement">A unified agentic brain.<br><span>From manipulation to navigation.</span></p>
+  <p class="hero-copy">One shared decision model to plan tasks, coordinate specialist skills,<br class="desktop-break"> and recover when execution does not go as planned.</p>
+  <p class="authors">Xiaomi Embodied Intelligence Team <span>×</span> Tsinghua University <span>×</span> University of Macau</p>
+  <div class="hero-actions"><a class="button primary" href="#execution">Explore the executions <span aria-hidden="true">↘</span></a><a class="button" href="#results">View benchmark results <span aria-hidden="true">↗</span></a></div>
+  <div class="facts" aria-label="The work at a glance">
+    <div><strong>1</strong><span>unified agent</span><small>Manipulation + navigation</small></div>
+    <div><strong>4B <i>/</i> 9B</strong><span>compact model sizes</span><small>Learned task-level decisions</small></div>
+    <div><strong>5</strong><span>task benchmarks</span><small>Four manipulation · one navigation</small></div>
+    <div><strong class="fact-rsi">RSI<span aria-hidden="true">↻</span></strong><span>recursive self-improvement</span><small>Verified interaction → model updates</small></div>
+  </div>
+  <p class="benchmark-names">LIBERO-Pro <span>·</span> LIBERO-Plus <span>·</span> RoboCasa365 <span>·</span> RoboTwin 2.0 <span>·</span> R2R-CE</p>
+  <div class="hero-strip" aria-label="Execution observations from the paper">
+    <figure><img src="assets/libero-7.webp" alt="Robot moving the moka pot onto the stove in LIBERO-Pro" width="292" height="292"><figcaption><span>01</span> Object manipulation</figcaption></figure>
+    <figure><img src="assets/robotwin-8.webp" alt="Robot completing a row of three colored blocks in RoboTwin" width="292" height="220"><figcaption><span>02</span> Bimanual tasks</figcaption></figure>
+    <figure><img src="assets/robocasa-8.webp" alt="Robot using a utensil in the vegetable pot in RoboCasa365" width="292" height="292"><figcaption><span>03</span> Household activities</figcaption></figure>
+    <figure><img src="assets/navigation-8.webp" alt="Navigation agent reaching the bathroom mirror in R2R-CE" width="292" height="292"><figcaption><span>04</span> Indoor navigation</figcaption></figure>
+  </div>
+  <p class="strip-note">Selected execution keyframes from the paper.</p>
+</section>
+<section class="section wrap overview" id="overview" aria-labelledby="overview-title">
+  <div><p class="eyebrow">THE IDEA</p><h2 id="overview-title">Task-level intelligence,<br>shared across domains.</h2></div>
+  <div class="prose"><p>OmniBrain-0 brings manipulation and navigation into one learned decision model. It interprets the instruction, tracks progress, selects the next tool, and uses the execution outcome to decide what happens next.</p><p>Specialist controllers retain their own physical skills. The shared brain learns how to use them together — including how to revise a plan after a failed grasp, a blocked route, or an incomplete sub-goal.</p><a class="text-link" href="#method">How the capabilities are learned <span aria-hidden="true">↗</span></a></div>
+  <div class="loop" aria-label="Closed-loop execution"><span>Instruction + observation</span><b aria-hidden="true">→</b><span class="loop-brain">OmniBrain-0</span><b aria-hidden="true">→</b><span>Specialist tools</span><b aria-hidden="true">↻</b><span>Execution feedback</span></div>
+</section>
+<section class="section section-line" id="execution" aria-labelledby="execution-title">
+  <div class="wrap"><div class="section-head"><div><p class="eyebrow">IN ACTION</p><h2 id="execution-title">How the agent<br>completes a task.</h2></div><p class="section-aside">Explore selected decision steps from four tasks.<br>Observations, state assessment, and tool calls stay connected.</p></div>
+  <div class="tabs" role="tablist" aria-label="Choose an execution"><button role="tab" aria-selected="true" aria-controls="execution-panel" id="tab-libero" data-demo="libero">LIBERO-Pro</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robotwin" data-demo="robotwin" tabindex="-1">RoboTwin 2.0</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-robocasa" data-demo="robocasa" tabindex="-1">RoboCasa365</button><button role="tab" aria-selected="false" aria-controls="execution-panel" id="tab-navigation" data-demo="navigation" tabindex="-1">R2R-CE</button></div>
+  <div class="execution-panel" id="execution-panel" role="tabpanel" aria-labelledby="tab-libero">
+    <div class="observation"><img id="execution-image" src="assets/libero-1.webp" alt="Initial observation: moka pot and stove" width="292" height="292"><span class="image-label">OBSERVATION <span id="image-step">01 / 08</span></span></div>
+    <div class="execution-copy"><p class="eyebrow" id="demo-kind">MANIPULATION · FAILURE RECOVERY</p><h3 id="demo-task">Turn on the stove and place the moka pot.</h3><div class="step-content" aria-live="polite" aria-atomic="true"><p class="step-index" id="step-label">STEP 01 — GROUND THE TASK</p><p class="decision" id="decision">Localize the moka pot and the stove, then approach the pot.</p><dl><dt>Evidence</dt><dd id="evidence">The pot and stove are visible; the pot has not been grasped.</dd><dt>Tool invocation</dt><dd><code id="tool-call">observe_state() → localize_pixels() → move_arm()</code></dd></dl></div><div class="step-controls"><button class="icon-button" id="previous-step" aria-label="Previous execution step">←</button><button class="play-button" id="play-steps" aria-label="Play execution keyframes">Play keyframes <span aria-hidden="true">▶</span></button><button class="icon-button" id="next-step" aria-label="Next execution step">→</button></div><div class="step-dots" aria-label="Execution steps" id="step-dots"></div><a class="text-link" id="full-trace" href="assets/trace-libero.webp" target="_blank" rel="noopener">View the complete trace <span aria-hidden="true">↗</span></a></div>
+  </div><p class="fineprint">Keyframes summarize the selected executions; playback advances through observations rather than replaying continuous robot motion.</p></div>
+</section>
+<section class="section wrap" id="results" aria-labelledby="results-title">
+  <div class="section-head"><div><p class="eyebrow">EVALUATION</p><h2 id="results-title">Five benchmarks.<br>Both sides of embodied action.</h2></div><p class="section-aside">Compact models evaluated on manipulation,<br>robustness, household tasks, and navigation.</p></div>
+  <div class="result-toolbar"><div class="result-filters" role="group" aria-label="Filter benchmark results"><button class="active" data-filter="all" aria-pressed="true">All five</button><button data-filter="manipulation" aria-pressed="false">Manipulation</button><button data-filter="navigation" aria-pressed="false">Navigation</button></div><span>Task success rate (%) ↑</span></div>
+  <div class="table-scroll"><table class="results-table"><caption class="visually-hidden">OmniBrain-0 results reported in the manuscript for 4B, 9B, and the RSI iteration.</caption><thead><tr><th scope="col">Benchmark</th><th scope="col">4B</th><th scope="col">9B</th><th scope="col">RSI iteration</th></tr></thead><tbody>
+    <tr data-domain="manipulation"><th scope="row">LIBERO-Pro<small>Instruction & object perturbations</small></th><td><span class="score">62.4</span><i style="--value:62.4%"></i></td><td><span class="score">65.5</span><i style="--value:65.5%"></i></td><td><span class="score">69.3</span><i style="--value:69.3%"></i></td></tr>
+    <tr data-domain="manipulation"><th scope="row">LIBERO-Plus<small>Seven robustness dimensions</small></th><td><span class="score">82.3</span><i style="--value:82.3%"></i></td><td><span class="score">83.8</span><i style="--value:83.8%"></i></td><td><span class="score">84.5</span><i style="--value:84.5%"></i></td></tr>
+    <tr data-domain="manipulation"><th scope="row">RoboCasa365<small>Atomic & composite household tasks</small></th><td><span class="score">33.6</span><i style="--value:33.6%"></i></td><td><span class="score">39.6</span><i style="--value:39.6%"></i></td><td><span class="score">43.2</span><i style="--value:43.2%"></i></td></tr>
+    <tr data-domain="manipulation"><th scope="row">RoboTwin 2.0<small>Clean & randomized bimanual tasks</small></th><td><span class="score">87.2</span><i style="--value:87.2%"></i></td><td><span class="score">88.2</span><i style="--value:88.2%"></i></td><td><span class="score">89.4</span><i style="--value:89.4%"></i></td></tr>
+    <tr data-domain="navigation"><th scope="row">R2R-CE<small>Val-Unseen · rand100 episodes</small></th><td><span class="score">55.0</span><i style="--value:55%"></i></td><td><span class="score">65.0</span><i style="--value:65%"></i></td><td><span class="score">66.0</span><i style="--value:66%"></i></td></tr>
+  </tbody></table></div><p class="fineprint">Results follow Tables 1–5 of the manuscript. The first four rows report Overall / Total success; R2R-CE reports SR on the 100-episode rand100 subset of Val-Unseen. RSI denotes a model updated through the data flywheel. Spatial understanding and referring are evaluated separately on EmbSpatial-Bench and RefSpatial-Bench.</p>
+</section>
+<section class="section section-line" id="method" aria-labelledby="method-title"><div class="wrap"><div class="section-head"><div><p class="eyebrow">LEARNING THE BRAIN</p><h2 id="method-title">From expert interaction<br>to a compact unified model.</h2></div><p class="section-aside">Three training stages connect embodied knowledge,<br>domain expertise, and cross-domain consolidation.</p></div>
+  <div class="training-stages"><article><span>01</span><h3>Embodied pretraining</h3><p>Establish shared spatial, task, and interaction knowledge from embodied question answering and agent data.</p></article><article><span>02</span><h3>Domain specialization</h3><p>Learn manipulation and navigation decisions from verified successes and successful recoveries.</p></article><article><span>03</span><h3>Multi-expert consolidation</h3><p>MOPD brings both experts into one student through supervision on student-generated decision prefixes.</p></article></div>
+  <figure class="paper-figure"><img src="assets/training.webp" alt="Three-stage OmniBrain-0 training framework: embodied pretraining, specialized distillation, and multi-teacher on-policy distillation" loading="lazy" width="2400" height="802"><figcaption>The three-stage training framework. Unification takes place in the learned decision model.</figcaption></figure>
+  <details class="detail-figure"><summary>How interaction becomes training data <span aria-hidden="true">+</span></summary><p>Normalize the interaction, check trajectory quality, reconstruct state-grounded reasoning, and validate consistency. Canonical successes and successful recoveries are retained.</p><img src="assets/data-pipeline.webp" alt="Interaction data construction through normalization, quality control, reasoning reconstruction and consistency validation" loading="lazy" width="2200" height="653"></details>
+</div></section>
+<section class="section wrap" id="rsi" aria-labelledby="rsi-title"><div class="section-head"><div><p class="eyebrow">RECURSIVE SELF-IMPROVEMENT</p><h2 id="rsi-title">Interaction today.<br>Training experience for the next round.</h2></div><p class="section-aside">Rubric-guided reminders and verified trajectories<br>connect execution evidence to model updates.</p></div>
+  <div class="rsi-steps"><div><b>01</b><h3>Analyze</h3><p>Use successes, failures, and inefficient attempts to identify execution challenges.</p></div><span aria-hidden="true">→</span><div><b>02</b><h3>Guide</h3><p>Refine rubrics and state-dependent reminders for subsequent decisions.</p></div><span aria-hidden="true">→</span><div><b>03</b><h3>Curate</h3><p>Keep verified successes and recovery trajectories for domain-expert updates.</p></div><span aria-hidden="true">→</span><div><b>04</b><h3>Improve</h3><p>Consolidate the updated experts with MOPD and collect again.</p></div></div>
+  <figure class="paper-figure"><img src="assets/flywheel.webp" alt="RSI data flywheel connecting challenge-driven interaction, reminder guidance, verified trajectory pools, expert updates and MOPD consolidation" loading="lazy" width="2200" height="1084"><figcaption>The RSI data flywheel links guidance refinement, data collection, and model learning.</figcaption></figure>
+  <details class="detail-figure"><summary>See when a reminder is triggered <span aria-hidden="true">+</span></summary><p>For “Put the wine bottle in the bowl,” reminders are triggered at steps 2 and 3, before grasping and the following arm motion. The other displayed steps proceed without reminders.</p><img src="assets/reminder.webp" alt="Reminder visualization showing triggers at steps 2 and 3 in a wine-bottle placement task" loading="lazy" width="2400" height="604"></details>
+</section>
+<section class="section section-line"><div class="wrap"><div class="section-head"><div><p class="eyebrow">PHYSICAL EXECUTION</p><h2>From simulation<br>to the robot.</h2></div><p class="section-aside">Real-world evaluation covers block stacking,<br>apple placement, and drawer opening.</p></div><figure class="paper-figure realworld"><img src="assets/real-world.webp" alt="Real-world robot task sequences for placing a red cube on a blue cube and putting an apple in a blue bowl" loading="lazy" width="2400" height="915"><figcaption>Observation, tool selection, and execution feedback in two real-world manipulation examples.</figcaption></figure></div></section>
+<section class="section wrap citation" id="citation" aria-labelledby="citation-title"><div><p class="eyebrow">REFERENCE</p><h2 id="citation-title">OmniBrain-0</h2><p>A Unified Agentic Model<br>for Embodied Intelligence.</p><p class="citation-team">Xiaomi Embodied Intelligence Team<br>Tsinghua University · University of Macau</p></div><div><div class="citation-bar"><span>BibTeX</span><button id="copy-citation">Copy citation <span aria-hidden="true">⧉</span></button></div><pre id="bibtex">@techreport{omnibrain0_2026,
+  title = {OmniBrain-0: A Unified Agentic
+           Model for Embodied Intelligence},
+  author = {{Xiaomi Embodied Intelligence Team}
+            and {Tsinghua University}
+            and {University of Macau}},
+  year = {2026}
+}</pre><p class="fineprint" id="copy-status" role="status"></p></div></section>
+</main>
+<footer class="wrap"><a class="brand" href="#top">OmniBrain<span class="muted">-0</span></a><p>A unified agentic model for embodied intelligence.</p><a href="https://github.com/luo-yc17/OmniBrain-0" target="_blank" rel="noopener">GitHub ↗</a><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
