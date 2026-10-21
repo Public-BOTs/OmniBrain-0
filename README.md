@@ -9,11 +9,11 @@
 </p>
 
 <p align="center">
-  <a href="https://luo-yc17.github.io/OmniBrain-0/assets/OmniBrain-0-Technical-Report.pdf"><img src="assets/badge-paper.svg" height="28" alt="Paper: Technical Report"></a>
+  <a href="https://public-bots.github.io/OmniBrain-0/assets/OmniBrain-0-Technical-Report.pdf"><img src="assets/badge-paper.svg" height="28" alt="Paper: Technical Report"></a>
   &nbsp;
-  <a href="https://luo-yc17.github.io/OmniBrain-0/"><img src="assets/badge-project.svg" height="28" alt="Project Page"></a>
+  <a href="https://public-bots.github.io/OmniBrain-0/"><img src="assets/badge-project.svg" height="28" alt="Project Page"></a>
   &nbsp;
-  <a href="#release-status"><img src="assets/badge-code.svg" height="28" alt="Code: Release Soon"></a>
+  <a href="https://github.com/luo-yc17/OmniBrain-0"><img src="assets/badge-code.svg" height="28" alt="Code: Release Soon"></a>
 </p>
 
 ## 🌟 Core Highlights
@@ -144,7 +144,7 @@ Real-world evaluation includes block stacking, apple placement, and drawer openi
 
 ## Project Website
 
-Visit the project page at **https://luo-yc17.github.io/OmniBrain-0/**.
+Visit the project page at **https://public-bots.github.io/OmniBrain-0/**.
 
 This repository contains the research project page and its source. The page includes interactive execution keyframes, benchmark results, the training framework, and RSI visualizations.
 
@@ -152,7 +152,7 @@ For local preview and GitHub Pages deployment, see [WEBSITE.md](WEBSITE.md).
 
 ## Release Status
 
-**Code: release soon.** The code release will be announced in this repository.
+**Code: release soon.** Code and release updates are hosted at [luo-yc17/OmniBrain-0](https://github.com/luo-yc17/OmniBrain-0).
 
 ## Citation
 

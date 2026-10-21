@@ -2,6 +2,12 @@
 
 Static research project page for **OmniBrain-0: A Unified Agentic Model for Embodied Intelligence**.
 
+Project website: https://public-bots.github.io/OmniBrain-0/
+
+Website source: https://github.com/Public-BOTs/OmniBrain-0
+
+Code repository: https://github.com/luo-yc17/OmniBrain-0
+
 ## Preview
 
 Run `python3 -m http.server 8765` and open http://127.0.0.1:8765. No build step or package installation is needed.
