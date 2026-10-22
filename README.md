@@ -139,7 +139,7 @@ In this wine-bottle placement example, reminders are triggered before the grasp 
 Real-world evaluation includes block stacking, apple placement, and drawer opening. The examples below show the robot coordinating perception and manipulation tools while updating its decisions from execution feedback.
 
 <p align="center">
-  <img src="assets/real-world.webp?v=overleaf-20261020" width="100%" alt="Physical robot execution examples for cube stacking and apple placement">
+  <img src="assets/real-world.webp?v=overleaf-20261022" width="100%" alt="Physical robot execution examples: yellow cube on red cube and apple in purple bowl">
 </p>
 
 ## Project Website
