@@ -45,3 +45,7 @@ The results comparison is responsive HTML with a shared 0–100 scale, rather th
 ## Task execution refresh
 
 The manipulation examples use original observations from slides 1–3 of `详细可视化（新）.pptx`: salad-dressing placement (5 steps), two bread loaves (5 steps), and croissant with jam (6 steps). Each step shows its observation, one short Think summary, and the corresponding Tool. The R2R-CE example keeps its 8 paper keyframes. Previous/next controls stop at the ends, and step playback can be paused or replayed. No video or additional measured results are synthesized. The reminder-policy page from the deck is excluded.
+
+## Execution video
+
+The player above Overview uses the supplied `OmniBrain-0_视频.mp4`, copied without re-encoding to `assets/omnibrain-execution.mp4`. It is a 1920×1080 H.264 MP4, approximately 43 seconds long, with its metadata before the media payload for streaming playback. The poster is an unaltered frame at 10 seconds. Native controls support seeking and fullscreen; `playsinline` supports mobile playback and `preload="metadata"` limits initial loading.
