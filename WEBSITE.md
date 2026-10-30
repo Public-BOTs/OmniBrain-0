@@ -48,4 +48,4 @@ The manipulation examples use original observations from slides 1–3 of `详细
 
 ## Execution video
 
-The player above Overview uses the supplied `OmniBrain-0_视频.mp4`, copied without re-encoding to `assets/omnibrain-execution.mp4`. It is a 1920×1080 H.264 MP4, approximately 43 seconds long, with its metadata before the media payload for streaming playback. The poster is an unaltered frame at 10 seconds. Native controls support seeking and fullscreen; `playsinline` supports mobile playback and `preload="metadata"` limits initial loading.
+The player above Overview uses the supplied `OmniBrain-0_视频new.mp4`, copied without re-encoding to `assets/omnibrain-execution.mp4`. It is a 1920×1080 H.264 MP4, approximately 47 seconds long, with its metadata before the media payload for streaming playback. The poster is an unaltered frame at 10 seconds. Native controls support seeking and fullscreen; `playsinline` supports mobile playback and `preload="metadata"` limits initial loading.
